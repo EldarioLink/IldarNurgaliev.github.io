@@ -416,12 +416,14 @@ textarea {
 }
 /*  Стили для второго модального окна */
 
+
+
 @media (max-width: 346px) {
   .navbarBox_textRight {
     text-align: center;
   }
   .navbarBox {
-    height: 36vh;
+    height: 187px;
     width: 100%;
     text-align: center;
   }
@@ -467,7 +469,7 @@ textarea {
     text-align: center;
   }
   .navbarBox {
-    height: 24vh;
+    height: 157px;
     width: 100%;
     text-align: center;
   }
@@ -505,15 +507,6 @@ textarea {
   }
   .footerBox_logo {
     margin-bottom: 29px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .modal-content {
-    margin: 12% auto;
-  }
-  .popup-top-corner:before {
-    border: none;
   }
 }
 
