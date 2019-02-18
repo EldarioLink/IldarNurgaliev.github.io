@@ -18,7 +18,7 @@ html {
 .navbarBox_link {
   text-decoration: underline;
   color: rgb(255, 154, 36);
-  font-family: "fonts/TTLimesSlab-Regular";
+  font-family: "./fonts/TTLimesSlab-Regular";
   font-size: 14pt;
   margin-left: 6px;
   margin-right: 40px;
@@ -33,7 +33,7 @@ html {
   font-size: 15pt;
   border: none;
   border-radius: 9px;
-  font-family: "fonts/TTLimesSlab-Regular";
+  font-family: "./fonts/TTLimesSlab-Regular";
   width: 145px;
   height: 50px;
   box-shadow: 0 -2px rgb(217, 115, 34) inset;
