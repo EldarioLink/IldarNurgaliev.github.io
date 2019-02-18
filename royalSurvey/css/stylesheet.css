@@ -538,7 +538,7 @@ textarea {
 }
 @font-face {
   font-family: "fonts/OpenSans-Bold";
-  src: url("./fonts/OpenSans-Bold.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
