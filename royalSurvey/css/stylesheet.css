@@ -550,7 +550,7 @@ textarea {
 }
 @font-face {
   font-family: "fonts/OpenSans-Regular";
-  src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
