@@ -532,7 +532,7 @@ textarea {
 
 @font-face {
   font-family: "fonts/OpenSans-Semibold";
-  src: url("./fonts/OpenSans-Semibold.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Semibold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -544,7 +544,7 @@ textarea {
 }
 @font-face {
   font-family: "fonts/TTLimesSlab-Regular";
-  src: url("./fonts/TTLimesSlab-Regular.otf") format("otf");
+  src: url("../fonts/TTLimesSlab-Regular.otf") format("otf");
   font-style: normal;
   font-weight: normal;
 }
