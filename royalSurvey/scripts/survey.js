@@ -3,20 +3,23 @@ survey = {
   firstQuestionDisplayed: -1,
   lastQuestionDisplayed: -1
 };
+var questionLength = undefined;
+var questionCounter = 1;
 
 (function(survey, $) {
-  survey.setup_survey = function(questions) {
+  survey.setup_survey = function(questions, questionCounter) {
     var self = this;
     this.questions = questions;
+    var currentQuestion = questionCounter;
 
     var elem = document.getElementById("myBar");
     var surveyBody_counter = document.getElementById("surveyBody_counter");
     var width = 8.3;
     var fullWidth = 100;
-    var currentQuestionNumber = 2;
+    var currentQuestionNumber = 1;
 
     function move(question) {
-      if (currentQuestionNumber >= question.length + 1) {
+      if (currentQuestionNumber >= question.length) {
         return false;
       } else {
         width += fullWidth / (question.length - 1);
@@ -24,11 +27,11 @@ survey = {
         if (width > 100) {
           elem.style.width = 100 + "%";
         }
-        elem.innerHTML = currentQuestionNumber++;
+        elem.innerHTML = ++currentQuestionNumber;
+
         surveyBody_counter.innerHTML = elem.innerHTML;
       }
     }
-
     this.questions.forEach(function(question) {
       self.generateQuestionElement(question);
     });
@@ -53,22 +56,18 @@ survey = {
         }
       }
       if (!ok) return;
-      move(questions);
-      if (
-        $("#nextBtn")
-          .text()
-          .indexOf("Следующий вопрос") === 0
-      ) {
+      if (!(currentQuestionNumber >= questionLength)) {
         self.showNextQuestionSet();
-      } else {
-        var answers = { res: $(window).width() + "x" + $(window).height() };
+        move(questions);
+      }
 
-        for (i = 0; i < self.questions.length; i++) {
-          answers[self.questions[i].id] = self.getQuestionAnswer(
-            self.questions[i]
-          );
-        }
-
+      currentQuestion += 1;
+    });
+    $("#formId").submit(function(event) {
+      var str = $("#formId").serialize();
+      event.preventDefault();
+      event.stopPropagation();
+      if (currentQuestion > questionLength) {
         $(".wrapperWallpaper_surveyBox").css("display", "none");
 
         $(".finishWindow").css("display", "block");
@@ -76,7 +75,7 @@ survey = {
           type: "post",
           url: "http://localhost:7000/answers",
           contentType: "application/json",
-          data: JSON.stringify(answers),
+          data: { str: str },
           processData: false,
           success: () => {
             self.hideAllQuestions();
@@ -89,7 +88,6 @@ survey = {
         });
       }
     });
-
     this.showNextQuestionSet();
   };
 
@@ -200,27 +198,17 @@ survey = {
           (this.lastQuestionDisplayed + 1) +
           ")"
       ).show();
+
       if (this.questions[this.lastQuestionDisplayed]["break_after"] === true)
         break;
     } while (this.lastQuestionDisplayed < this.questions.length - 1);
-
-    this.doButtonStates();
-  };
-
-  survey.doButtonStates = function() {
-    if (this.lastQuestionDisplayed == this.questions.length - 1) {
-      $("#nextBtn").text("Последний вопрос");
-      $("#nextBtn").addClass("blue");
-    } else if ($("#nextBtn").text() === "Последний вопрос") {
-      $("#nextBtn").text("Следующий вопрос");
-      $("#nextBtn").removeClass("blue");
-    }
   };
 })(survey, jQuery);
 
 $(document).ready(function() {
   $.getJSON("questions.json", function(json) {
-    survey.setup_survey(json);
+    survey.setup_survey(json, questionCounter);
+    questionLength = json.length;
   });
 });
 
