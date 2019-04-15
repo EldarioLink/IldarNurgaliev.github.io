@@ -6,7 +6,7 @@ survey = {
 var questionLength = undefined;
 var questionCounter = 1;
 
-(function(survey, $) {
+((survey, $) => {
   survey.setup_survey = function(questions, questionCounter) {
     var self = this;
     this.questions = questions;
@@ -18,7 +18,7 @@ var questionCounter = 1;
     var fullWidth = 100;
     var currentQuestionNumber = 1;
 
-    function move(question) {
+    var move = (question) => {
       if (currentQuestionNumber >= question.length) {
         return false;
       } else {
@@ -32,11 +32,11 @@ var questionCounter = 1;
         surveyBody_counter.innerHTML = elem.innerHTML;
       }
     }
-    this.questions.forEach(function(question) {
+    this.questions.forEach((question)  => {
       self.generateQuestionElement(question);
     });
 
-    $("#nextBtn").click(function() {
+    $("#nextBtn").click(() => {
       var ok = true;
       for (
         i = self.firstQuestionDisplayed;
@@ -63,7 +63,7 @@ var questionCounter = 1;
 
       currentQuestion += 1;
     });
-    $("#formId").submit(function(event) {
+    $("#formId").submit((event) => {
       var str = $("#formId").serialize();
       event.preventDefault();
       event.stopPropagation();
@@ -91,7 +91,7 @@ var questionCounter = 1;
     this.showNextQuestionSet();
   };
 
-  survey.getQuestionAnswer = function(question) {
+  survey.getQuestionAnswer = (question) => {
     var result;
     if (question.type === "single-select") {
       result = $(
@@ -109,7 +109,7 @@ var questionCounter = 1;
     return result ? result : undefined;
   };
 
-  survey.generateQuestionElement = function(question) {
+  survey.generateQuestionElement = (question) => {
     var content = "content: '1'";
     var questionElement = $(
       '<div id="' + question.id + '" class="question"></div>'
@@ -128,7 +128,7 @@ var questionCounter = 1;
     questionCommentElement.html(question.comment);
     if (question.type === "single-select") {
       questionElement.addClass("single-select");
-      question.options.forEach(function(option, key) {
+      question.options.forEach((option, key) => {
         questionAnswerElement.append(
           '<div class="row surveyAnswerLine"> <div class=" col-xs-1 col-xs-offset-4 radio"><div class="circleBase">' +
             `${key + 1}` +
@@ -146,12 +146,12 @@ var questionCounter = 1;
       questionElement.addClass("single-select-oneline");
       var html =
         '<table border="0" cellpadding="5" cellspacing="0"><tr><td></td>';
-      question.options.forEach(function(label) {
+      question.options.forEach((label) => {
         html += "<td><label>" + label + "</label></td>";
       });
       html +=
         "<td></td></tr><tr><td><div>" + question.labels[0] + "</div></td>";
-      question.options.forEach(function(label) {
+      question.options.forEach((label) => {
         html +=
           '<td><div><input type="radio" value="' +
           label +
@@ -178,11 +178,11 @@ var questionCounter = 1;
     questionElement.hide();
   };
 
-  survey.hideAllQuestions = function() {
-    $(".question:visible").each(function(index, element) {
+  survey.hideAllQuestions = () => {
+    $(".question:visible").each((index, element) => {
       $(element).hide();
     });
-    $(".required-message").each(function(index, element) {
+    $(".required-message").each((index, element) => {
       $(element).hide();
     });
   };
@@ -205,13 +205,13 @@ var questionCounter = 1;
   };
 })(survey, jQuery);
 
-$(document).ready(function() {
-  $.getJSON("questions.json", function(json) {
+$(document).ready( () => {
+  $.getJSON("questions.json", (json) => {
     survey.setup_survey(json, questionCounter);
     questionLength = json.length;
   });
 });
 
-window.onbeforeunload = function() {
+window.onbeforeunload = () => {
   return "This will reset all answers that you've already filled in!";
 };
