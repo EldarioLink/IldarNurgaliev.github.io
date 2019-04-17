@@ -15,7 +15,7 @@ body.modal-open {
 
 .showphone {
   cursor: pointer;
-  border-radius: 22px !important;
+  border-radius: 22px;
 }
 .content_padding {
   margin-top: 14px;
@@ -301,7 +301,8 @@ body {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #064071;
 }
 .home-posts-items {
   overflow: hidden;
@@ -409,6 +410,11 @@ a:hover {
   text-align: center;
 }
 
+.fav_add{
+  cursor: pointer;
+  border-radius: 22px;
+}
+
 .fav_infav,
 .fav_infav:hover,
 .fav_infav:focus {
@@ -419,6 +425,7 @@ a:hover {
 .btn_radius{
   border-radius: 20px;
   border: 2px solid #ccc;
+
 }
 
 .sidebar_btn {
@@ -504,6 +511,8 @@ a:hover {
   height: 50px;
 }
 
+
+
 #loadmore-btn-conteiner {
   padding-bottom: 20px;
   text-align: center;
@@ -511,6 +520,10 @@ a:hover {
 
 .loadmore {
   border-radius: 8px;
+}
+
+#btn-load{
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
 }
 
 #select_location select {
