@@ -400,13 +400,8 @@ a:hover {
   pointer-events: none;
   opacity: 0.4;
 }
-.fav_add {
-  border-radius: 22px !important;
-}
 
-.btn {
-  border-radius: 3px;
-}
+
 
 .show_one_btns {
   padding-bottom: 10px;
@@ -419,6 +414,11 @@ a:hover {
 .fav_infav:focus {
   color: #ffffff;
   background: #54d10b;
+}
+
+.btn_radius{
+  border-radius: 20px;
+  border: 2px solid #ccc;
 }
 
 .sidebar_btn {
