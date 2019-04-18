@@ -32,7 +32,6 @@ button {
   outline: none;
 }
 
-
 .items_n b {
   font-size: 18px;
   margin-top: 10px;
@@ -283,6 +282,7 @@ body {
   background-color: #ffffff;
   padding-bottom: 1px;
   margin-bottom: 7px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .fav-top {
@@ -402,15 +402,13 @@ a:hover {
   opacity: 0.4;
 }
 
-
-
 .show_one_btns {
   padding-bottom: 10px;
   margin-bottom: 12px;
   text-align: center;
 }
 
-.fav_add{
+.fav_add {
   cursor: pointer;
   border-radius: 22px;
 }
@@ -422,12 +420,29 @@ a:hover {
   background: #54d10b;
 }
 
-.btn_radius{
+.btn_radius {
   border-radius: 20px;
   border: 2px solid #ccc;
-
 }
 
+.nav-btns {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+}
+.edit-btns {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #333;
+  border-radius: 20px;
+
+  border: 2px solid #ccc;
+}
+.edit-btns:hover {
+  color: #333;
+  background-color: rgb(224, 221, 221);
+}
 .sidebar_btn {
   background-color: #f9db4d;
   border: 1px solid #f9db4d;
@@ -454,7 +469,7 @@ a:hover {
 .sidebar_btn:active {
   cursor: pointer;
   text-decoration: none;
-  background-color: #f1c80a;
+  background-color: #eecb1e;
 }
 
 .sidebar_btn:hover {
@@ -463,6 +478,10 @@ a:hover {
   background-color: #f5d53d;
 }
 
+.description-ads {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .isRequire {
   padding: 10px;
 
@@ -511,8 +530,6 @@ a:hover {
   height: 50px;
 }
 
-
-
 #loadmore-btn-conteiner {
   padding-bottom: 20px;
   text-align: center;
@@ -522,7 +539,7 @@ a:hover {
   border-radius: 8px;
 }
 
-#btn-load{
+#btn-load {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
 }
 
@@ -538,14 +555,29 @@ a:hover {
   padding: 10px;
   background-color: #ffffff;
 }
-
+.standard-btn {
+  background-color: #f9db4d;
+  border-radius: 24px;
+  border: 0px;
+}
+.standard-btn:hover {
+  background-color: #f5d53d;
+}
+.standard-btn:active,
+.standard-btn:focus {
+  text-decoration: none !important;
+}
+.standard-btn:active {
+  background-color: #eecb1e;
+}
 .page-reg {
   padding: 10px;
   background-color: #ffffff;
 }
 
 .page-block {
-  padding: 10px;
+  padding-bottom: 30px !important;
+  padding-top: 10px;
   background-color: #ffffff;
   padding-left: 30px;
   padding-right: 30px;
@@ -582,7 +614,7 @@ a:hover {
   display: block;
 }
 .one-post-item-content-body {
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 #one-post-item {
