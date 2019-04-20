@@ -369,6 +369,7 @@ a:hover {
   font-size: 14px;
   font-weight: 700;
 }
+
 .marker-geo {
   background-image: url("../assets/compass.png");
   background-size: cover; /* Масштабируем фон */
@@ -469,12 +470,13 @@ a:hover {
   border: 2px solid #ccc;
 }
 
-.Icon_type_phone {
-  background-image: url(../assets/phone2.png);
+.imgFav {
+  background-image: url(../assets/favorites.png);
   height: 18px;
   width: 18px;
   display: inline-block;
   background-size: contain;
+  margin-right: 5px;
 }
 
 .nav-btns {

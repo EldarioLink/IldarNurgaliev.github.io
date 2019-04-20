@@ -24,10 +24,10 @@
         <div class="row">
             <div class="col-sm-3">
                 <a href="https://all-my-services.com">
-                    <span class="brand-nav"  ></span>
+                    <span class="brand-nav"></span>
 
 
-            </a>
+                </a>
             </div>
             <div class="col-sm-5">
                 <div id="searchform">
@@ -47,58 +47,58 @@
                             </button>
 
 
-                        <ul class="dropdown-menu">
-                            <li id="city-detect">Определяем..</li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="https://all-my-services.com/novokuznetsk">Новокузнецк</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="https://all-my-services.com/kemerovo">Кемерово</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="https://all-my-services.com/kemerovskaya-oblast">Другой</a></li>
-                        </ul>
+                            <ul class="dropdown-menu">
+                                <li id="city-detect">Определяем..</li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="https://all-my-services.com/novokuznetsk">Новокузнецк</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="https://all-my-services.com/kemerovo">Кемерово</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="https://all-my-services.com/kemerovskaya-oblast">Другой</a></li>
+                            </ul>
+                        </div>
+                    </form>
                 </div>
-                </form>
-            </div>
-            <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
-                type="text/javascript"></script>
-            <script>
-                function curCity() {
-                    if (ymaps.geolocation.city) {
-                        $.ajax({
-                            url: 'https://all-my-services.com/ajax/get-city',
-                            dataType: "json",
+                <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
+                    type="text/javascript"></script>
+                <script>
+                    function curCity() {
+                        if (ymaps.geolocation.city) {
+                            $.ajax({
+                                url: 'https://all-my-services.com/ajax/get-city',
+                                dataType: "json",
 
-                            data: {
-                                'city_name': ymaps.geolocation.city,
-                                '_token': "1uyXRhNpy0ZZxZRC18qGUNcUTdJ0ulLDSChsR5Gx"
-                            },
-                            success: function (data) {
-                                if (undefined != data) {
-                                    $("#city-detect").html('<a href="' + data.url + '">' + data.name + '</a>');
-                                }
-                                else {
+                                data: {
+                                    'city_name': ymaps.geolocation.city,
+                                    '_token': "1uyXRhNpy0ZZxZRC18qGUNcUTdJ0ulLDSChsR5Gx"
+                                },
+                                success: function (data) {
+                                    if (undefined != data) {
+                                        $("#city-detect").html('<a href="' + data.url + '">' + data.name + '</a>');
+                                    }
+                                    else {
+                                        $("#user-city").html("Выберите город");
+                                    }
+                                },
+                                error: function () {
                                     $("#user-city").html("Выберите город");
                                 }
-                            },
-                            error: function () {
-                                $("#user-city").html("Выберите город");
-                            }
-                        });
-                    } else {
-                        $("#user-city").html("Выберите город");
+                            });
+                        } else {
+                            $("#user-city").html("Выберите город");
+                        }
                     }
-                }
-            </script>
-        </div>
-        <div class="col-sm-4">
-            <div class="pull-right">
-                <a class="nav-btns btn-default" href="https://all-my-services.com/favorites">Избранное</a>
-                <a class="nav-btns nav-btn-color" href="https://all-my-services.com/auth/register">Регистрация</a>
-                <a class="nav-btns btn-default" href="https://all-my-services.com/auth/login">Войти</a>
+                </script>
             </div>
+            <div class="col-sm-4">
+                <div class="pull-right">
+                    <a class="nav-btns btn-default" href="https://all-my-services.com/favorites">Избранное</a>
+                    <a class="nav-btns nav-btn-color" href="https://all-my-services.com/auth/register">Регистрация</a>
+                    <a class="nav-btns btn-default" href="https://all-my-services.com/auth/login">Войти</a>
+                </div>
 
+            </div>
         </div>
-    </div>
     </div>
 
     <div class="container">
@@ -251,7 +251,7 @@
                     </div>
                     <div class="toplineadd">
                         <p>Ваше объявление тут</p>
-                        <a href="./addAds.html" class="btn  btn-block sidebar_btn  ">Подать объявление</a>
+                        <a href="./addAds.html" class="btn btn-block sidebar_btn  ">Подать объявление</a>
                     </div>
                     <div id="posts-items">
                         <div class="items_n">
@@ -297,13 +297,20 @@
                                 </div>
                                 <div class="item-bottom">
                                     <button class="fav_add bold-text btn_radius  btn btn-default" data-fav="39"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default" onclick="showPhonePost(39)">
+                                        onclick="acFavorite(this);">
+                                        <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div>
+                                    </button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group bold-text"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius bold-text btn-default showone" onclick="showPost(39)">Подробнее
+                                    <button class="btn btn_radius bold-text btn-default showone"
+                                        onclick="showPost(39)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -330,14 +337,19 @@
                                     - Опытный сертифицированный мастер пр...
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add  btn_radius  btn btn-default" data-fav="55"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add  btn_radius bold-text btn btn-default" data-fav="55"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn btn_radius bold-text btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(55)">Подробнее
+                                    <button class="btn btn_radius bold-text btn-default showone"
+                                        onclick="showPost(55)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -364,14 +376,19 @@
                                     СРОЧНЫЙ ремонт НА ДОМУ. ВЫЗОВ И ДИАГН...
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add  btn_radius btn btn-default " data-fav="54"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
-                                        <div class="ads_btns_group"> <span class="imgPhone">
+                                    <button class="fav_add  btn_radius bold-text btn btn-default " data-fav="54"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
+                                        <div class="ads_btns_group "> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(54)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(54)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -398,14 +415,19 @@
                                     Профессиональный ремонт стиральных ма...
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius btn btn-default" data-fav="53"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius btn btn-default" data-fav="53"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(53)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(53)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -453,14 +475,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius btn btn-default" data-fav="52"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius btn btn-default" data-fav="52"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(52)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(52)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -508,14 +535,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius  btn btn-default" data-fav="49"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text  btn_radius  btn btn-default" data-fav="49"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text  btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(49)">Подробнее
+                                    <button class="btn  bold-text btn_radius btn-default showone"
+                                        onclick="showPost(49)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -564,14 +596,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add  btn_radius btn btn-default" data-fav="51"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text  btn_radius btn btn-default" data-fav="51"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text  btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(51)">Подробнее
+                                    <button class="btn  bold-text btn_radius btn-default showone"
+                                        onclick="showPost(51)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -619,14 +656,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius  btn btn-default" data-fav="38"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius  btn btn-default" data-fav="38"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(38)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(38)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -674,14 +716,21 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius btn btn-default" data-fav="48"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius btn btn-default" data-fav="48"
+                                        onclick="acFavorite(this);">
+                                        <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div>
+                                    </button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(48)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(48)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -708,14 +757,19 @@
                                     Ремонт компьютеров, на дому
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius btn btn-default" data-fav="47"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius btn btn-default" data-fav="47"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(47)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(47)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -763,14 +817,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius  btn btn-default" data-fav="46"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius  btn btn-default" data-fav="46"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(46)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(46)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -818,14 +877,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius  btn btn-default" data-fav="37"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius  btn btn-default" data-fav="37"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(37)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(37)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -873,14 +937,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius  btn btn-default" data-fav="41"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius  btn btn-default" data-fav="41"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn  btn_radius btn-default showone" onclick="showPost(41)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(41)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -928,14 +997,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius  btn btn-default" data-fav="40"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius  btn btn-default" data-fav="40"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn  btn_radius btn-default showone" onclick="showPost(40)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(40)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
@@ -983,14 +1057,19 @@
                                     </div>
                                 </div>
                                 <div class="item-bottom">
-                                    <button class="fav_add btn_radius  btn btn-default" data-fav="36"
-                                        onclick="acFavorite(this);">Избранное</button>
-                                    <a id="showPhone-39" class="btn btn_radius btn-default" onclick="showPhonePost(39)">
+                                    <button class="fav_add bold-text btn_radius  btn btn-default" data-fav="36"
+                                        onclick="acFavorite(this);"> <div class="ads_btns_group">
+                                            <span class="imgFav">
+
+                                            </span> Избранное</div></button>
+                                    <a id="showPhone-39" class="btn bold-text btn_radius btn-default"
+                                        onclick="showPhonePost(39)">
                                         <div class="ads_btns_group"> <span class="imgPhone">
 
                                             </span> Телефон </div>
                                     </a>
-                                    <button class="btn btn_radius btn-default showone" onclick="showPost(36)">Подробнее
+                                    <button class="btn bold-text btn_radius btn-default showone"
+                                        onclick="showPost(36)">Подробнее
                                         <span class="glyphicon glyphicon-chevron-right"
                                             aria-hidden="true"></span></button>
                                 </div>
