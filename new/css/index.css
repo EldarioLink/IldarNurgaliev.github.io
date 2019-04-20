@@ -304,6 +304,9 @@ a:hover {
   text-decoration: none !important;
   color: #064071;
 }
+#posts-items{
+  margin-top:10px;
+}
 .home-posts-items {
   overflow: hidden;
   /* border: 2px solid gray; */
