@@ -30,7 +30,7 @@
 
                 </a>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-5">
                 <div id="searchform">
                     <form class="navbar-form navbar-left" role="search" action="https://all-my-services.com/kemerovo">
                         <div class="form-group">
@@ -41,60 +41,65 @@
                         <div class="btn-group">
                             <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" onclick="curCity()">
-                                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-                                Кемерово</button>
-                            <ul class="dropdown-menu">
-                                <li id="city-detect">Определяем..</li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="https://all-my-services.com/novokuznetsk">Новокузнецк</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="https://all-my-services.com/kemerovo">Кемерово</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="https://all-my-services.com/kemerovskaya-oblast">Другой</a></li>
-                            </ul>
-                        </div>
-                    </form>
-                </div>
-                <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
-                    type="text/javascript"></script>
-                <script>
-                    function curCity() {
-                        if (ymaps.geolocation.city) {
-                            $.ajax({
-                                url: 'https://all-my-services.com/ajax/get-city',
-                                dataType: "json",
+                                <div class="geo-pos">
+                                    <span class="marker-geo" aria-hidden="true"></span>
+                                    Кемерово
+                                </div>
+                            </button>
 
-                                data: {
-                                    'city_name': ymaps.geolocation.city,
-                                    '_token': "1uyXRhNpy0ZZxZRC18qGUNcUTdJ0ulLDSChsR5Gx"
-                                },
-                                success: function (data) {
-                                    if (undefined != data) {
-                                        $("#city-detect").html('<a href="' + data.url + '">' + data.name + '</a>');
-                                    }
-                                    else {
-                                        $("#user-city").html("Выберите город");
-                                    }
-                                },
-                                error: function () {
+
+                        <ul class="dropdown-menu">
+                            <li id="city-detect">Определяем..</li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://all-my-services.com/novokuznetsk">Новокузнецк</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://all-my-services.com/kemerovo">Кемерово</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://all-my-services.com/kemerovskaya-oblast">Другой</a></li>
+                        </ul>
+                </div>
+                </form>
+            </div>
+            <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
+                type="text/javascript"></script>
+            <script>
+                function curCity() {
+                    if (ymaps.geolocation.city) {
+                        $.ajax({
+                            url: 'https://all-my-services.com/ajax/get-city',
+                            dataType: "json",
+
+                            data: {
+                                'city_name': ymaps.geolocation.city,
+                                '_token': "1uyXRhNpy0ZZxZRC18qGUNcUTdJ0ulLDSChsR5Gx"
+                            },
+                            success: function (data) {
+                                if (undefined != data) {
+                                    $("#city-detect").html('<a href="' + data.url + '">' + data.name + '</a>');
+                                }
+                                else {
                                     $("#user-city").html("Выберите город");
                                 }
-                            });
-                        } else {
-                            $("#user-city").html("Выберите город");
-                        }
+                            },
+                            error: function () {
+                                $("#user-city").html("Выберите город");
+                            }
+                        });
+                    } else {
+                        $("#user-city").html("Выберите город");
                     }
-                </script>
-            </div>
-            <div class="col-sm-5">
-                <div class="pull-right">
-                    <a class="nav-btns btn-default" href="https://all-my-services.com/favorites">Избранное</a>
-                    <a class="nav-btns nav-btn-color" href="https://all-my-services.com/auth/register">Регистрация</a>
-                    <a class="nav-btns btn-default" href="https://all-my-services.com/auth/login">Войти</a>
-                </div>
-
-            </div>
+                }
+            </script>
         </div>
+        <div class="col-sm-4">
+            <div class="pull-right">
+                <a class="nav-btns btn-default" href="https://all-my-services.com/favorites">Избранное</a>
+                <a class="nav-btns nav-btn-color" href="https://all-my-services.com/auth/register">Регистрация</a>
+                <a class="nav-btns btn-default" href="https://all-my-services.com/auth/login">Войти</a>
+            </div>
+
+        </div>
+    </div>
     </div>
 
     <div class="container">
@@ -213,7 +218,8 @@
                                     <br class="url-hidden hidden">
                                 </div>
                                 <div class="col-sm-12">
-                                    <a href="#" onclick="open_urls();" class="pull-right btn-url-open">...ещё</a>
+                                    <a href="#" onclick="open_urls();" class="pull-right btn-url-open">... Показать
+                                        ещё</a>
                                     <a href="#" onclick="close_urls();"
                                         class="pull-right btn-url-close hidden">скрыть</a>
                                 </div>

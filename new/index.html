@@ -1,817 +1,1006 @@
-
 <html lang="ru">
-    <head>
+
+<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="robots" content="noimageindex">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="stylesheet" href="https://yastatic.net/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://yastatic.net/bootstrap/3.3.6/css/bootstrap.min.css"
+                crossorigin="anonymous">
         <link rel="stylesheet" href="./css/index.css">
         <meta name="format-detection" content="telephone=no">
         <title>Доска объявлений по услугам от частных лиц и компаний | Объявления услуг</title>
 
-    <meta name="keywords" content="Объявления услуг. Бесплатные объявления по услугам ">
+        <meta name="keywords" content="Объявления услуг. Бесплатные объявления по услугам ">
 
-    <meta name="description" content="Доска объявлений по услугам от частных лиц и компаний. Цены на услуги.">
+        <meta name="description" content="Доска объявлений по услугам от частных лиц и компаний. Цены на услуги.">
 
-    </head>
-    <body>
+</head>
 
-
-            <div class="all-my-services-header">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <a href="https://all-my-services.com" class="h1 all-my-services-title">                                                                                 <span id="handshake" style="background-position-y: 0px;"></span>Все <span id="o">услуги</span><span id="dotcom"></span>
+<body>
 
 
-                                                </a>
-                            </div>
-                            <div class="col-sm-4">
+        <div class="all-my-services-header">
+                <div class="row">
+                        <div class="col-sm-3">
+                                <a href="https://all-my-services.com">
+                                        <span class="brand-nav"  ></span>
 
-                            </div>
-                            <div class="col-sm-5">
-                                <div class="pull-right">
-                    <a class="nav-btns btn-default" href="https://all-my-services.com/favorites">Избранное</a>
-                    <a class="nav-btns nav-btn-color" href="https://all-my-services.com/auth/register">Регистрация</a>
-                    <a class="nav-btns btn-default" href="https://all-my-services.com/auth/login">Войти</a>
-                </div>
 
-                            </div>
+                                </a>
                         </div>
-                    </div>
+                        <div class="col-sm-4">
+
+                        </div>
+                        <div class="col-sm-5">
+                                <div class="pull-right">
+                                        <a class="nav-btns btn-default"
+                                                href="https://all-my-services.com/favorites">Избранное</a>
+                                        <a class="nav-btns nav-btn-color"
+                                                href="https://all-my-services.com/auth/register">Регистрация</a>
+                                        <a class="nav-btns btn-default"
+                                                href="https://all-my-services.com/auth/login">Войти</a>
+                                </div>
+
+                        </div>
+                </div>
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8 blog-main">
-                            <div class="mainpage">
-            <div class="page-block page-welcome">
-                <h1>                                                                                All-My-Services.com - Объявления услуг
+                <div class="row">
+                        <div class="col-sm-8 blog-main">
+                                <div class="mainpage">
+                                        <div class="page-block page-welcome">
+                                                <h1> All-My-Services.com - Объявления услуг
 
 
-                                    </h1>
-                <script type="text/javascript">
-    window.onload = function () {
-        if (ymaps.geolocation.city){
-            $.ajax({
-                url: 'http://all-my-services.com/ajax/get-city',
-                dataType: "json",
+                                                </h1>
+                                                <script type="text/javascript">
+                                                        window.onload = function () {
+                                                                if (ymaps.geolocation.city) {
+                                                                        $.ajax({
+                                                                                url: 'http://all-my-services.com/ajax/get-city',
+                                                                                dataType: "json",
 
-                data:{
-                    'city_name': ymaps.geolocation.city,
-                    '_token': "MVp53gOHoni4ugVYwkivn267qfcRMO6NomD1htq0"
-                },
-                success: function(data){
-                    if(undefined != data){
-                        $("#user-city").html ('<a href="' + data.url + '">' + data.name + '</a>');
-                    }
-                    else{
-                        $("#user-city").html ("Выберите город");
-                    }
-                },
-                error: function(){
-                    $("#user-city").html ("Выберите город");
-                }
-            });
-        }else{
-            $("#user-city").html ("Выберите город");
-        }
-    }
-</script>
-<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-<div id="user-city">Определяем..</div>
-                <div class="row city-list-home">
-            <div class="col-sm-4">
-                        <a href="http://all-my-services.com/yoshkar-ola">
-                                            <strong>Йошкар-Ола</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/yaroslavl">
-                                            <strong>Ярославль</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/voronezh">
-                                            <strong>Воронеж</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/vologda">
-                                            <strong>Вологда</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/volgograd">
-                                            <strong>Волгоград</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/ulyanovsk">
-                                            <strong>Ульяновск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/ufa">
-                                            <strong>Уфа</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/tolyatti">
-                                            <strong>Тольятти</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/tambov">
-                                            <strong>Тамбов</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/stavropol">
-                                            <strong>Ставрополь</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/sochi">
-                                            <strong>Сочи</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/smolensk">
-                                            <strong>Смоленск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/saratov">
-                                            <strong>Саратов</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/saransk">
-                                            <strong>Саранск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/sankt-peterburg">
-                                            <strong>Санкт-Петербург</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/samara">
-                                            <strong>Самара</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/ryazan">
-                                            <strong>Рязань</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/rostov-na-donu">
-                                            <strong>Ростов-на-Дону</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/pskov">
-                                            <strong>Псков</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/perm">
-                                            <strong>Пермь</strong>
-                                    </a><br>
-                </div>
-            <div class="col-sm-4">
-                        <a href="http://all-my-services.com/penza">
-                                            <strong>Пенза</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/orenburg">
-                                            <strong>Оренбург</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/orel">
-                                            <strong>Орел</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/novorossiysk">
-                                            <strong>Новороссийск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/nizhniy-novgorod">
-                                            <strong>Нижний Новгород</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/naberezhnye-chelny">
-                                            <strong>Набережные Челны</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/murmansk">
-                                            <strong>Мурманск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/moskva">
-                                            <strong>Москва</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/magnitogorsk">
-                                            <strong>Магнитогорск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/lipetsk">
-                                            <strong>Липецк</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/krasnodar">
-                                            <strong>Краснодар</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/kostroma">
-                                            <strong>Кострома</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/kazan">
-                                            <strong>Казань</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/kaliningrad">
-                                            <strong>Калининград</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/izhevsk">
-                                            <strong>Ижевск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/ivanovo">
-                                            <strong>Иваново</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/cheboksary">
-                                            <strong>Чебоксары</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/bryansk">
-                                            <strong>Брянск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/astrakhan">
-                                            <strong>Астрахань</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/arkhangelsk">
-                                            <strong>Архангельск</strong>
-                                    </a><br>
-                </div>
-            <div class="col-sm-4">
-                        <a href="http://all-my-services.com/ekaterinburge">
-                                            <strong>Екатеринбурге</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/tyumen">
-                                            <strong>Тюмень</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/tomsk">
-                                            <strong>Томск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/salekhard">
-                                            <strong>Салехард</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/omsk">
-                                            <strong>Омск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/novosibirsk">
-                                            <strong>Новосибирск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/novokuznetsk">
-                                            <strong>Новокузнецк</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/krasnoyarsk">
-                                            <strong>Красноярск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/khanty-mansiysk">
-                                            <strong>Ханты-Мансийск</strong>
-                                    </a><br>
-                        <a href="./src/cityAds.html">
-                                            <strong>Кемерово</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/gorno-altaysk">
-                                            <strong>Горно-Алтайск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/chelyabinsk">
-                                            <strong>Челябинск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/barnaul">
-                                            <strong>Барнаул</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/vladivostok">
-                                            <strong>Владивосток</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/khabarovsk">
-                                            <strong>Хабаровск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/blagoveshchensk">
-                                            <strong>Благовещенск</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/sevastopol">
-                                            <strong>Севастополь</strong>
-                                    </a><br>
-                        <a href="http://all-my-services.com/vladikavkaz">
-                                            <strong>Владикавказ </strong>
-                                    </a><br>
-                </div>
-    </div>
-                <p>По региону</p>
-<div class="row region-list">
-            <div class="col-sm-4">
-                   <a href="http://all-my-services.com/adygeya">
-                                    Адыгея
-                            </a><br>
-                    <a href="http://all-my-services.com/altayskiy-kray">
-                                    Алтайский край
-                            </a><br>
-                    <a href="http://all-my-services.com/amurskaya-oblast">
-                                    Амурская область
-                            </a><br>
-                    <a href="http://all-my-services.com/arkhangelskaya-oblast">
-                                    Архангельская область
-                            </a><br>
-                    <a href="http://all-my-services.com/astrakhanskaya-oblast">
-                                    Астраханская область
-                            </a><br>
-                    <a href="http://all-my-services.com/bashkortostan">
-                                    Башкортостан
-                            </a><br>
-                    <a href="http://all-my-services.com/belgorodskaya-oblast">
-                                    Белгородская область
-                            </a><br>
-                    <a href="http://all-my-services.com/bryanskaya-oblast">
-                                    Брянская область
-                            </a><br>
-                    <a href="http://all-my-services.com/buryatiya">
-                                    Бурятия
-                            </a><br>
-                    <a href="http://all-my-services.com/vladimirskaya-oblast">
-                                    Владимирская область
-                            </a><br>
-                    <a href="http://all-my-services.com/volgogradskaya-oblast">
-                                    Волгоградская область
-                            </a><br>
-                    <a href="http://all-my-services.com/vologodskaya-oblast">
-                                    Вологодская область
-                            </a><br>
-                    <a href="http://all-my-services.com/voronezhskaya-oblast">
-                                    Воронежская область
-                            </a><br>
-                    <a href="http://all-my-services.com/dagestan">
-                                    Дагестан
-                            </a><br>
-                    <a href="http://all-my-services.com/evreyskaya-ao">
-                                    Еврейская АО
-                            </a><br>
-                    <a href="http://all-my-services.com/zabaykalskiy-kray">
-                                    Забайкальский край
-                            </a><br>
-                    <a href="http://all-my-services.com/ivanovskaya-oblast">
-                                    Ивановская область
-                            </a><br>
-                    <a href="http://all-my-services.com/ingushetiya">
-                                    Ингушетия
-                            </a><br>
-                    <a href="http://all-my-services.com/irkutskaya-oblast">
-                                    Иркутская область
-                            </a><br>
-                    <a href="http://all-my-services.com/kabardino-balkariya">
-                                    Кабардино-Балкария
-                            </a><br>
-                    <a href="http://all-my-services.com/kaliningradskaya-oblast">
-                                    Калининградская область
-                            </a><br>
-                    <a href="http://all-my-services.com/kalmykiya">
-                                    Калмыкия
-                            </a><br>
-                    <a href="http://all-my-services.com/kaluzhskaya-oblast">
-                                    Калужская область
-                            </a><br>
-                    <a href="http://all-my-services.com/kamchatskiy-kray">
-                                    Камчатский край
-                            </a><br>
-                    <a href="http://all-my-services.com/karachaevo-cherkesiya">
-                                    Карачаево-Черкесия
-                            </a><br>
-                    <a href="http://all-my-services.com/kareliya">
-                                    Карелия
-                            </a><br>
-                    <a href="http://all-my-services.com/kemerovskaya-oblast">
-                                    Кемеровская область
-                            </a><br>
-                    <a href="http://all-my-services.com/kirovskaya-oblast">
-                                    Кировская область
-                            </a><br>
-                </div>
-            <div class="col-sm-4">
-                   <a href="http://all-my-services.com/komi">
-                                    Коми
-                            </a><br>
-                    <a href="http://all-my-services.com/kostromskaya-oblast">
-                                    Костромская область
-                            </a><br>
-                    <a href="http://all-my-services.com/krasnodarskiy-kray">
-                                    Краснодарский край
-                            </a><br>
-                    <a href="http://all-my-services.com/krasnoyarskiy-kray">
-                                    Красноярский край
-                            </a><br>
-                    <a href="http://all-my-services.com/krym">
-                                    Крым
-                            </a><br>
-                    <a href="http://all-my-services.com/kurganskaya-oblast">
-                                    Курганская область
-                            </a><br>
-                    <a href="http://all-my-services.com/kurskaya-oblast">
-                                    Курская область
-                            </a><br>
-                    <a href="http://all-my-services.com/leningradskaya-oblast">
-                                    Ленинградская область
-                            </a><br>
-                    <a href="http://all-my-services.com/lipetskaya-oblast">
-                                    Липецкая область
-                            </a><br>
-                    <a href="http://all-my-services.com/magadanskaya-oblast">
-                                    Магаданская область
-                            </a><br>
-                    <a href="http://all-my-services.com/mariy-el">
-                                    Марий Эл
-                            </a><br>
-                    <a href="http://all-my-services.com/mordoviya">
-                                    Мордовия
-                            </a><br>
-                    <a href="http://all-my-services.com/moskovskaya-oblast">
-                                    Московская область
-                            </a><br>
-                    <a href="http://all-my-services.com/murmanskaya-oblast">
-                                    Мурманская область
-                            </a><br>
-                    <a href="http://all-my-services.com/nenetskiy-ao">
-                                    Ненецкий АО
-                            </a><br>
-                    <a href="http://all-my-services.com/nizhegorodskaya-oblast">
-                                    Нижегородская область
-                            </a><br>
-                    <a href="http://all-my-services.com/novgorodskaya-oblast">
-                                    Новгородская область
-                            </a><br>
-                    <a href="http://all-my-services.com/novosibirskaya-oblast">
-                                    Новосибирская область
-                            </a><br>
-                    <a href="http://all-my-services.com/omskaya-oblast">
-                                    Омская область
-                            </a><br>
-                    <a href="http://all-my-services.com/orenburgskaya-oblast">
-                                    Оренбургская область
-                            </a><br>
-                    <a href="http://all-my-services.com/orlovskaya-oblast">
-                                    Орловская область
-                            </a><br>
-                    <a href="http://all-my-services.com/penzenskaya-oblast">
-                                    Пензенская область
-                            </a><br>
-                    <a href="http://all-my-services.com/permskiy-kray">
-                                    Пермский край
-                            </a><br>
-                    <a href="http://all-my-services.com/primorskiy-kray">
-                                    Приморский край
-                            </a><br>
-                    <a href="http://all-my-services.com/pskovskaya-oblast">
-                                    Псковская область
-                            </a><br>
-                    <a href="http://all-my-services.com/respublika-altay">
-                                    Республика Алтай
-                            </a><br>
-                    <a href="http://all-my-services.com/rostovskaya-oblast">
-                                    Ростовская область
-                            </a><br>
-                    <a href="http://all-my-services.com/ryazanskaya-oblast">
-                                    Рязанская область
-                            </a><br>
-                </div>
-            <div class="col-sm-4">
-                   <a href="http://all-my-services.com/samarskaya-oblast">
-                                    Самарская область
-                            </a><br>
-                    <a href="http://all-my-services.com/saratovskaya-oblast">
-                                    Саратовская область
-                            </a><br>
-                    <a href="http://all-my-services.com/sakha-yakutiya">
-                                    Саха (Якутия)
-                            </a><br>
-                    <a href="http://all-my-services.com/sakhalinskaya-oblast">
-                                    Сахалинская область
-                            </a><br>
-                    <a href="http://all-my-services.com/sverdlovskaya-oblast">
-                                    Свердловская область
-                            </a><br>
-                    <a href="http://all-my-services.com/severnaya-osetiya">
-                                    Северная Осетия
-                            </a><br>
-                    <a href="http://all-my-services.com/smolenskaya-oblast">
-                                    Смоленская область
-                            </a><br>
-                    <a href="http://all-my-services.com/stavropolskiy-kray">
-                                    Ставропольский край
-                            </a><br>
-                    <a href="http://all-my-services.com/tambovskaya-oblast">
-                                    Тамбовская область
-                            </a><br>
-                    <a href="http://all-my-services.com/tatarstan">
-                                    Татарстан
-                            </a><br>
-                    <a href="http://all-my-services.com/tverskaya-oblast">
-                                    Тверская область
-                            </a><br>
-                    <a href="http://all-my-services.com/tomskaya-oblast">
-                                    Томская область
-                            </a><br>
-                    <a href="http://all-my-services.com/tulskaya-oblast">
-                                    Тульская область
-                            </a><br>
-                    <a href="http://all-my-services.com/tyva">
-                                    Тыва
-                            </a><br>
-                    <a href="http://all-my-services.com/tyumenskaya-oblast">
-                                    Тюменская область
-                            </a><br>
-                    <a href="http://all-my-services.com/udmurtiya">
-                                    Удмуртия
-                            </a><br>
-                    <a href="http://all-my-services.com/ulyanovskaya-oblast">
-                                    Ульяновская область
-                            </a><br>
-                    <a href="http://all-my-services.com/khabarovskiy-kray">
-                                    Хабаровский край
-                            </a><br>
-                    <a href="http://all-my-services.com/khakasiya">
-                                    Хакасия
-                            </a><br>
-                    <a href="http://all-my-services.com/khanty-mansiyskiy-ao">
-                                    Ханты-Мансийский АО
-                            </a><br>
-                    <a href="http://all-my-services.com/chelyabinskaya-oblast">
-                                    Челябинская область
-                            </a><br>
-                    <a href="http://all-my-services.com/chechenskaya-respublika">
-                                    Чеченская республика
-                            </a><br>
-                    <a href="http://all-my-services.com/chuvashiya">
-                                    Чувашия
-                            </a><br>
-                    <a href="http://all-my-services.com/chukotskiy-ao">
-                                    Чукотский АО
-                            </a><br>
-                    <a href="http://all-my-services.com/yamalo-nenetskiy-ao">
-                                    Ямало-Ненецкий АО
-                            </a><br>
-                    <a href="http://all-my-services.com/yaroslavskaya-oblast">
-                                    Ярославская область
-                            </a><br>
-                </div>
-    </div>
-                <div class="home-new-posts">
-    <h2>Новые объявления о услугах</h2>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                        <!-- http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-remont-39 -->
-                <a href="./src/mainAds.html">
-                Компьютерный ремонт
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-remont-39">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/395c7539472c9e2.jpg" alt="Компьютерный ремонт">
-                </a>
-                        <p>Компьютерный ремонт на дому</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/barnaul">Барнаул</a> |
-                <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-master-s-vyezdom-na-adres-42">
-                Компьютерный мастер с выездом на адрес
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-master-s-vyezdom-na-adres-42">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/425c78086377b43.jpg" alt="Компьютерный мастер с выездом на адрес">
-                </a>
-                        <p>Компьютерный мастер
-Ремонт нетбуков...</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/barnaul">Барнаул</a> |
-                <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-pomoshch-s-vyezdom-mastera-43">
-                Компьютерная помощь с выездом мастера
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-pomoshch-s-vyezdom-mastera-43">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/435c780b3643d25.jpg" alt="Компьютерная помощь с выездом мастера">
-                </a>
-                        <p>Компьютерная помощь и ремонт техники ...</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/barnaul">Барнаул</a> |
-                <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-kompyuterov-56">
-                Ремонт компьютеров
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-kompyuterov-56">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/565c985df68a51d.jpg" alt="Ремонт компьютеров">
-                </a>
-                        <p>Занимаюсь ремонтом компьютерной техни...</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika">Крупная бытовая техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/master-predostavlyaet-uslugi-po-remontu-kholodilnikov-55">
-                мастер предоставляет услуги по ремонту холодильников
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/master-predostavlyaet-uslugi-po-remontu-kholodilnikov-55">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/555c8fbfd1ab2a3.jpg" alt="мастер предоставляет услуги по ремонту холодильников">
-                </a>
-                        <p>- Опытный сертифицированный мастер пр...</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika">Крупная бытовая техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/remont-stiralnykh-mashin-54">
-                Ремонт Стиральных машин
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/remont-stiralnykh-mashin-54">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/545c8fbe92119a2.jpg" alt="Ремонт Стиральных машин">
-                </a>
-                        <p>СРОЧНЫЙ ремонт НА ДОМУ. ВЫЗОВ И ДИАГН...</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika">Крупная бытовая техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/professionalnyy-remont-stiralnykh-mashin-53">
-                Профессиональный ремонт стиральных машин
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/professionalnyy-remont-stiralnykh-mashin-53">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/535c8fbe39595be.jpg" alt="Профессиональный ремонт стиральных машин">
-                </a>
-                        <p>Профессиональный ремонт стиральных ма...</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-master-52">
-                Компьютерный мастер
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-master-52">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/525c865d535336d.jpg" alt="Компьютерный мастер ">
-                </a>
-                        <p>Оказываю услуги по компьютерной помощ...</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-noutbukov-i-kompbyuterov-49">
-                РЕМОНТ НОУТБУКОВ И КОМПЬЮТЕРОВ
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-noutbukov-i-kompbyuterov-49">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/495c7cf7091dd6f.jpg" alt="РЕМОНТ НОУТБУКОВ И КОМПЬЮТЕРОВ">
-                </a>
-                        <p>РЕМОНТ НОУТБУКОВ И КОМПЬЮТЕРОВ</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-tekhnika-remont-i-servis-51">
-                Компьютерная техника. ремонт и сервис
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-tekhnika-remont-i-servis-51">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/515c7cf949390a8.jpg" alt="Компьютерная техника. ремонт и сервис">
-                </a>
-                        <p>РЕМОНТ КОМПЬЮТЕРНОЙ ТЕХНИКИ:
-УДАЛЕН...</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternye-uslugi-na-domu-38">
-                Компьютерные услуги на дому
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternye-uslugi-na-domu-38">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/385c73ed749b12a.jpg" alt="Компьютерные услуги на дому">
-                </a>
-                        <p>Компьютерные услуги на дому</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/ustanovka-windows-48">
-                Установка Windows
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/ustanovka-windows-48">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/485c7cf41e57f53.jpg" alt="Установка Windows">
-                </a>
-                        <p>Установка Windows на дому</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-kompyuterov-47">
-                Ремонт компьютеров
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-kompyuterov-47">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/475c7cf326a6ae7.jpg" alt="Ремонт компьютеров">
-                </a>
-                        <p>Ремонт компьютеров, на дому</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/kemerovo">Кемерово</a> |
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт и обслуживание техники</a>
-                 |
-                    <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная техника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-pomoshch-s-vyezdom-mastera-46">
-                Компьютерная помощь с выездом мастера
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-pomoshch-s-vyezdom-mastera-46">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/465c7cf2d377ea0.jpg" alt="Компьютерная помощь с выездом мастера">
-                </a>
-                        <p>Компьютерная помощь с выездом мастера</p>
-        </div>
-            <div class="home-posts-items">
-            <h3>
-                <a href="http://all-my-services.com/barnaul">Барнаул</a> |
-                <a href="http://all-my-services.com/barnaul/remont-stroitelstvo">Ремонт, строительство</a>
-                 |
-                    <a href="http://all-my-services.com/barnaul/remont-stroitelstvo/santekhnika">Сантехника</a>
-                            </h3>
-            <b>
-                <a href="http://all-my-services.com/barnaul/remont-stroitelstvo/santekhnika/vypolnyayu-santekhnicheskie-raboty-45">
-                Выполняю сантехнические работы.
-                </a>
-            </b>
-                            <a href="http://all-my-services.com/barnaul/remont-stroitelstvo/santekhnika/vypolnyayu-santekhnicheskie-raboty-45">
-                    <img class="photo-home-new-posts" src="http://all-my-services.com/images/posts/455c7a7fd125b07.jpg" alt="Выполняю сантехнические работы. ">
-                </a>
-                        <p>Выполняю сантехнические работы.
-Про...</p>
-        </div>
-    </div>
-            </div>
-        </div>
-        <div class="reqblock"></div>
-        <div class="similarblock"></div>
-                </div>
-                <div class="col-sm-4 sitebarcont">
-                    <div class="sitebar">
-    <div class="sidebar-module sidebar-module-inset">
-        <p>                                                                               All-My-<span style="color:red;">Services</span>.com - объявления о услугах.
+                                                                                data: {
+                                                                                        'city_name': ymaps.geolocation.city,
+                                                                                        '_token': "MVp53gOHoni4ugVYwkivn267qfcRMO6NomD1htq0"
+                                                                                },
+                                                                                success: function (data) {
+                                                                                        if (undefined != data) {
+                                                                                                $("#user-city").html('<a href="' + data.url + '">' + data.name + '</a>');
+                                                                                        }
+                                                                                        else {
+                                                                                                $("#user-city").html("Выберите город");
+                                                                                        }
+                                                                                },
+                                                                                error: function () {
+                                                                                        $("#user-city").html("Выберите город");
+                                                                                }
+                                                                        });
+                                                                } else {
+                                                                        $("#user-city").html("Выберите город");
+                                                                }
+                                                        }
+                                                </script>
+                                                <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
+                                                        type="text/javascript"></script>
+                                                <div id="user-city">Определяем..</div>
+                                                <div class="row city-list-home">
+                                                        <div class="col-sm-4">
+                                                                <a href="http://all-my-services.com/yoshkar-ola">
+                                                                        <strong>Йошкар-Ола</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/yaroslavl">
+                                                                        <strong>Ярославль</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/voronezh">
+                                                                        <strong>Воронеж</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/vologda">
+                                                                        <strong>Вологда</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/volgograd">
+                                                                        <strong>Волгоград</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/ulyanovsk">
+                                                                        <strong>Ульяновск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/ufa">
+                                                                        <strong>Уфа</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tolyatti">
+                                                                        <strong>Тольятти</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tambov">
+                                                                        <strong>Тамбов</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/stavropol">
+                                                                        <strong>Ставрополь</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/sochi">
+                                                                        <strong>Сочи</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/smolensk">
+                                                                        <strong>Смоленск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/saratov">
+                                                                        <strong>Саратов</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/saransk">
+                                                                        <strong>Саранск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/sankt-peterburg">
+                                                                        <strong>Санкт-Петербург</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/samara">
+                                                                        <strong>Самара</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/ryazan">
+                                                                        <strong>Рязань</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/rostov-na-donu">
+                                                                        <strong>Ростов-на-Дону</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/pskov">
+                                                                        <strong>Псков</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/perm">
+                                                                        <strong>Пермь</strong>
+                                                                </a><br>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <a href="http://all-my-services.com/penza">
+                                                                        <strong>Пенза</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/orenburg">
+                                                                        <strong>Оренбург</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/orel">
+                                                                        <strong>Орел</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/novorossiysk">
+                                                                        <strong>Новороссийск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/nizhniy-novgorod">
+                                                                        <strong>Нижний Новгород</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/naberezhnye-chelny">
+                                                                        <strong>Набережные Челны</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/murmansk">
+                                                                        <strong>Мурманск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/moskva">
+                                                                        <strong>Москва</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/magnitogorsk">
+                                                                        <strong>Магнитогорск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/lipetsk">
+                                                                        <strong>Липецк</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/krasnodar">
+                                                                        <strong>Краснодар</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kostroma">
+                                                                        <strong>Кострома</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kazan">
+                                                                        <strong>Казань</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kaliningrad">
+                                                                        <strong>Калининград</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/izhevsk">
+                                                                        <strong>Ижевск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/ivanovo">
+                                                                        <strong>Иваново</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/cheboksary">
+                                                                        <strong>Чебоксары</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/bryansk">
+                                                                        <strong>Брянск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/astrakhan">
+                                                                        <strong>Астрахань</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/arkhangelsk">
+                                                                        <strong>Архангельск</strong>
+                                                                </a><br>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <a href="http://all-my-services.com/ekaterinburge">
+                                                                        <strong>Екатеринбурге</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tyumen">
+                                                                        <strong>Тюмень</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tomsk">
+                                                                        <strong>Томск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/salekhard">
+                                                                        <strong>Салехард</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/omsk">
+                                                                        <strong>Омск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/novosibirsk">
+                                                                        <strong>Новосибирск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/novokuznetsk">
+                                                                        <strong>Новокузнецк</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/krasnoyarsk">
+                                                                        <strong>Красноярск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/khanty-mansiysk">
+                                                                        <strong>Ханты-Мансийск</strong>
+                                                                </a><br>
+                                                                <a href="./src/cityAds.html">
+                                                                        <strong>Кемерово</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/gorno-altaysk">
+                                                                        <strong>Горно-Алтайск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/chelyabinsk">
+                                                                        <strong>Челябинск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/barnaul">
+                                                                        <strong>Барнаул</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/vladivostok">
+                                                                        <strong>Владивосток</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/khabarovsk">
+                                                                        <strong>Хабаровск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/blagoveshchensk">
+                                                                        <strong>Благовещенск</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/sevastopol">
+                                                                        <strong>Севастополь</strong>
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/vladikavkaz">
+                                                                        <strong>Владикавказ </strong>
+                                                                </a><br>
+                                                        </div>
+                                                </div>
+                                                <p>По региону</p>
+                                                <div class="row region-list">
+                                                        <div class="col-sm-4">
+                                                                <a href="http://all-my-services.com/adygeya">
+                                                                        Адыгея
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/altayskiy-kray">
+                                                                        Алтайский край
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/amurskaya-oblast">
+                                                                        Амурская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/arkhangelskaya-oblast">
+                                                                        Архангельская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/astrakhanskaya-oblast">
+                                                                        Астраханская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/bashkortostan">
+                                                                        Башкортостан
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/belgorodskaya-oblast">
+                                                                        Белгородская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/bryanskaya-oblast">
+                                                                        Брянская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/buryatiya">
+                                                                        Бурятия
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/vladimirskaya-oblast">
+                                                                        Владимирская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/volgogradskaya-oblast">
+                                                                        Волгоградская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/vologodskaya-oblast">
+                                                                        Вологодская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/voronezhskaya-oblast">
+                                                                        Воронежская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/dagestan">
+                                                                        Дагестан
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/evreyskaya-ao">
+                                                                        Еврейская АО
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/zabaykalskiy-kray">
+                                                                        Забайкальский край
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/ivanovskaya-oblast">
+                                                                        Ивановская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/ingushetiya">
+                                                                        Ингушетия
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/irkutskaya-oblast">
+                                                                        Иркутская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/kabardino-balkariya">
+                                                                        Кабардино-Балкария
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/kaliningradskaya-oblast">
+                                                                        Калининградская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kalmykiya">
+                                                                        Калмыкия
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kaluzhskaya-oblast">
+                                                                        Калужская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kamchatskiy-kray">
+                                                                        Камчатский край
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/karachaevo-cherkesiya">
+                                                                        Карачаево-Черкесия
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kareliya">
+                                                                        Карелия
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovskaya-oblast">
+                                                                        Кемеровская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kirovskaya-oblast">
+                                                                        Кировская область
+                                                                </a><br>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <a href="http://all-my-services.com/komi">
+                                                                        Коми
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/kostromskaya-oblast">
+                                                                        Костромская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/krasnodarskiy-kray">
+                                                                        Краснодарский край
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/krasnoyarskiy-kray">
+                                                                        Красноярский край
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/krym">
+                                                                        Крым
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kurganskaya-oblast">
+                                                                        Курганская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/kurskaya-oblast">
+                                                                        Курская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/leningradskaya-oblast">
+                                                                        Ленинградская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/lipetskaya-oblast">
+                                                                        Липецкая область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/magadanskaya-oblast">
+                                                                        Магаданская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/mariy-el">
+                                                                        Марий Эл
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/mordoviya">
+                                                                        Мордовия
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/moskovskaya-oblast">
+                                                                        Московская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/murmanskaya-oblast">
+                                                                        Мурманская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/nenetskiy-ao">
+                                                                        Ненецкий АО
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/nizhegorodskaya-oblast">
+                                                                        Нижегородская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/novgorodskaya-oblast">
+                                                                        Новгородская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/novosibirskaya-oblast">
+                                                                        Новосибирская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/omskaya-oblast">
+                                                                        Омская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/orenburgskaya-oblast">
+                                                                        Оренбургская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/orlovskaya-oblast">
+                                                                        Орловская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/penzenskaya-oblast">
+                                                                        Пензенская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/permskiy-kray">
+                                                                        Пермский край
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/primorskiy-kray">
+                                                                        Приморский край
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/pskovskaya-oblast">
+                                                                        Псковская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/respublika-altay">
+                                                                        Республика Алтай
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/rostovskaya-oblast">
+                                                                        Ростовская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/ryazanskaya-oblast">
+                                                                        Рязанская область
+                                                                </a><br>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <a href="http://all-my-services.com/samarskaya-oblast">
+                                                                        Самарская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/saratovskaya-oblast">
+                                                                        Саратовская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/sakha-yakutiya">
+                                                                        Саха (Якутия)
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/sakhalinskaya-oblast">
+                                                                        Сахалинская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/sverdlovskaya-oblast">
+                                                                        Свердловская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/severnaya-osetiya">
+                                                                        Северная Осетия
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/smolenskaya-oblast">
+                                                                        Смоленская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/stavropolskiy-kray">
+                                                                        Ставропольский край
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tambovskaya-oblast">
+                                                                        Тамбовская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tatarstan">
+                                                                        Татарстан
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tverskaya-oblast">
+                                                                        Тверская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tomskaya-oblast">
+                                                                        Томская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tulskaya-oblast">
+                                                                        Тульская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tyva">
+                                                                        Тыва
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/tyumenskaya-oblast">
+                                                                        Тюменская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/udmurtiya">
+                                                                        Удмуртия
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/ulyanovskaya-oblast">
+                                                                        Ульяновская область
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/khabarovskiy-kray">
+                                                                        Хабаровский край
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/khakasiya">
+                                                                        Хакасия
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/khanty-mansiyskiy-ao">
+                                                                        Ханты-Мансийский АО
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/chelyabinskaya-oblast">
+                                                                        Челябинская область
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/chechenskaya-respublika">
+                                                                        Чеченская республика
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/chuvashiya">
+                                                                        Чувашия
+                                                                </a><br>
+                                                                <a href="http://all-my-services.com/chukotskiy-ao">
+                                                                        Чукотский АО
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/yamalo-nenetskiy-ao">
+                                                                        Ямало-Ненецкий АО
+                                                                </a><br>
+                                                                <a
+                                                                        href="http://all-my-services.com/yaroslavskaya-oblast">
+                                                                        Ярославская область
+                                                                </a><br>
+                                                        </div>
+                                                </div>
+                                                <div class="home-new-posts">
+                                                        <h2>Новые объявления о услугах</h2>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <!-- http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-remont-39 -->
+                                                                        <a href="./src/mainAds.html">
+                                                                                Компьютерный ремонт
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-remont-39">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/395c7539472c9e2.jpg"
+                                                                                alt="Компьютерный ремонт">
+                                                                </a>
+                                                                <p>Компьютерный ремонт на дому</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul">Барнаул</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-master-s-vyezdom-na-adres-42">
+                                                                                Компьютерный мастер с выездом на адрес
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-master-s-vyezdom-na-adres-42">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/425c78086377b43.jpg"
+                                                                                alt="Компьютерный мастер с выездом на адрес">
+                                                                </a>
+                                                                <p>Компьютерный мастер
+                                                                        Ремонт нетбуков...</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul">Барнаул</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-pomoshch-s-vyezdom-mastera-43">
+                                                                                Компьютерная помощь с выездом мастера
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-pomoshch-s-vyezdom-mastera-43">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/435c780b3643d25.jpg"
+                                                                                alt="Компьютерная помощь с выездом мастера">
+                                                                </a>
+                                                                <p>Компьютерная помощь и ремонт техники ...</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul">Барнаул</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-kompyuterov-56">
+                                                                                Ремонт компьютеров
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/barnaul/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-kompyuterov-56">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/565c985df68a51d.jpg"
+                                                                                alt="Ремонт компьютеров">
+                                                                </a>
+                                                                <p>Занимаюсь ремонтом компьютерной техни...</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika">Крупная
+                                                                                бытовая техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/master-predostavlyaet-uslugi-po-remontu-kholodilnikov-55">
+                                                                                мастер предоставляет услуги по ремонту
+                                                                                холодильников
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/master-predostavlyaet-uslugi-po-remontu-kholodilnikov-55">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/555c8fbfd1ab2a3.jpg"
+                                                                                alt="мастер предоставляет услуги по ремонту холодильников">
+                                                                </a>
+                                                                <p>- Опытный сертифицированный мастер пр...</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika">Крупная
+                                                                                бытовая техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/remont-stiralnykh-mashin-54">
+                                                                                Ремонт Стиральных машин
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/remont-stiralnykh-mashin-54">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/545c8fbe92119a2.jpg"
+                                                                                alt="Ремонт Стиральных машин">
+                                                                </a>
+                                                                <p>СРОЧНЫЙ ремонт НА ДОМУ. ВЫЗОВ И ДИАГН...</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika">Крупная
+                                                                                бытовая техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/professionalnyy-remont-stiralnykh-mashin-53">
+                                                                                Профессиональный ремонт стиральных машин
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/krupnaya-bytovaya-tekhnika/professionalnyy-remont-stiralnykh-mashin-53">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/535c8fbe39595be.jpg"
+                                                                                alt="Профессиональный ремонт стиральных машин">
+                                                                </a>
+                                                                <p>Профессиональный ремонт стиральных ма...</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-master-52">
+                                                                                Компьютерный мастер
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternyy-master-52">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/525c865d535336d.jpg"
+                                                                                alt="Компьютерный мастер ">
+                                                                </a>
+                                                                <p>Оказываю услуги по компьютерной помощ...</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-noutbukov-i-kompbyuterov-49">
+                                                                                РЕМОНТ НОУТБУКОВ И КОМПЬЮТЕРОВ
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-noutbukov-i-kompbyuterov-49">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/495c7cf7091dd6f.jpg"
+                                                                                alt="РЕМОНТ НОУТБУКОВ И КОМПЬЮТЕРОВ">
+                                                                </a>
+                                                                <p>РЕМОНТ НОУТБУКОВ И КОМПЬЮТЕРОВ</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-tekhnika-remont-i-servis-51">
+                                                                                Компьютерная техника. ремонт и сервис
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-tekhnika-remont-i-servis-51">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/515c7cf949390a8.jpg"
+                                                                                alt="Компьютерная техника. ремонт и сервис">
+                                                                </a>
+                                                                <p>РЕМОНТ КОМПЬЮТЕРНОЙ ТЕХНИКИ:
+                                                                        УДАЛЕН...</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternye-uslugi-na-domu-38">
+                                                                                Компьютерные услуги на дому
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternye-uslugi-na-domu-38">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/385c73ed749b12a.jpg"
+                                                                                alt="Компьютерные услуги на дому">
+                                                                </a>
+                                                                <p>Компьютерные услуги на дому</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/ustanovka-windows-48">
+                                                                                Установка Windows
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/ustanovka-windows-48">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/485c7cf41e57f53.jpg"
+                                                                                alt="Установка Windows">
+                                                                </a>
+                                                                <p>Установка Windows на дому</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-kompyuterov-47">
+                                                                                Ремонт компьютеров
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/remont-kompyuterov-47">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/475c7cf326a6ae7.jpg"
+                                                                                alt="Ремонт компьютеров">
+                                                                </a>
+                                                                <p>Ремонт компьютеров, на дому</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo">Кемерово</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki">Ремонт
+                                                                                и обслуживание техники</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika">Компьютерная
+                                                                                техника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-pomoshch-s-vyezdom-mastera-46">
+                                                                                Компьютерная помощь с выездом мастера
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/kemerovo/remont-i-obsluzhivanie-tekhniki/kompyuternaya-tekhnika/kompyuternaya-pomoshch-s-vyezdom-mastera-46">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/465c7cf2d377ea0.jpg"
+                                                                                alt="Компьютерная помощь с выездом мастера">
+                                                                </a>
+                                                                <p>Компьютерная помощь с выездом мастера</p>
+                                                        </div>
+                                                        <div class="home-posts-items">
+                                                                <h3>
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul">Барнаул</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-stroitelstvo">Ремонт,
+                                                                                строительство</a>
+                                                                        |
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-stroitelstvo/santekhnika">Сантехника</a>
+                                                                </h3>
+                                                                <b>
+                                                                        <a
+                                                                                href="http://all-my-services.com/barnaul/remont-stroitelstvo/santekhnika/vypolnyayu-santekhnicheskie-raboty-45">
+                                                                                Выполняю сантехнические работы.
+                                                                        </a>
+                                                                </b>
+                                                                <a
+                                                                        href="http://all-my-services.com/barnaul/remont-stroitelstvo/santekhnika/vypolnyayu-santekhnicheskie-raboty-45">
+                                                                        <img class="photo-home-new-posts"
+                                                                                src="http://all-my-services.com/images/posts/455c7a7fd125b07.jpg"
+                                                                                alt="Выполняю сантехнические работы. ">
+                                                                </a>
+                                                                <p>Выполняю сантехнические работы.
+                                                                        Про...</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="reqblock"></div>
+                                <div class="similarblock"></div>
+                        </div>
+                        <div class="col-sm-4 sitebarcont">
+                                <div class="sitebar">
+                                        <div class="sidebar-module sidebar-module-inset">
+                                                <p> All-My-<span style="color:red;">Services</span>.com - объявления о
+                                                        услугах.
 
 
-                                    </p>
-                    <p>
-                <a href="./src/addAds.html" class="sidebar_btn">Подать объявление</a>
-            </p>
-                            </div>
-</div>
+                                                </p>
+                                                <p>
+                                                        <a href="./src/addAds.html" class="sidebar_btn">Подать
+                                                                объявление</a>
+                                                </p>
+                                        </div>
+                                </div>
+                        </div>
                 </div>
-            </div>
         </div>
         <div id="foter">
-                                                    <a href="/">All-My-Services.com</a> - Сайт бесплатных объявлений о услугах
+                <a href="/">All-My-Services.com</a> - Сайт бесплатных объявлений о услугах
 
-                                    <br>
-            <a href="http://all-my-services.com/auth/login">Вход</a> |
-            <a href="http://all-my-services.com/auth/register">Регистрация</a> |
-            <a href="http://all-my-services.com/password/email">Восстановление пароля</a> |
-            Служба поддержки: <a href="mailto:help@all-my-services.com                        ">help@all-my-services.com                        </a>
+                <br>
+                <a href="http://all-my-services.com/auth/login">Вход</a> |
+                <a href="http://all-my-services.com/auth/register">Регистрация</a> |
+                <a href="http://all-my-services.com/password/email">Восстановление пароля</a> |
+                Служба поддержки: <a
+                        href="mailto:help@all-my-services.com                        ">help@all-my-services.com </a>
         </div>
         </div><!-- /.container -->
         <script src="https://yastatic.net/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
         <script src="http://all-my-services.com/js/jquery.maskedinput.min.js"></script>
         <script src="./js/script.js"></script>
-        <div class="nanobar" style="position: fixed;"><div class="bar" style="width: 5%;"></div></div>
-            </body>
+        <div class="nanobar" style="position: fixed;">
+                <div class="bar" style="width: 5%;"></div>
+        </div>
+</body>
+
 </html>

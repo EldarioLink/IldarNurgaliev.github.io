@@ -8,6 +8,7 @@ body {
   word-wrap: break-word;
 }
 
+
 body.modal-open {
   position: fixed;
   overflow: hidden;
@@ -19,6 +20,10 @@ body.modal-open {
 }
 .content_padding {
   margin-top: 14px;
+}
+
+.h1.all-my-services-title #o {
+  color: #FF005A;
 }
 
 input:active,
@@ -356,17 +361,31 @@ a:hover {
 .nav-btn-color:hover {
   background-color: #449ae2;
 }
-#handshake {
-  width: 32px;
-  height: 32px;
-  background-image: url("../assets/logo.png");
-  float: left;
+.geo-pos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.marker-geo{
+  background-image: url("/assets/compass.png");
+  background-size: cover; /* Масштабируем фон */
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right:5px;
+}
+.brand-nav{
+  background-image: url("/assets/logoff.png");
+  background-size: cover; /* Масштабируем фон */
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  display: inline-block;
   margin-right: 5px;
 }
 
-#handshake:hover {
-  background-position-y: 1px;
-}
 
 .item-ads {
   margin-bottom: 20px;
