@@ -18,7 +18,7 @@ $(function() {
 
 		var handshake = 0;
 
-		$('.uslugio-title').hover(function(){
+		$('.all-my-services-title').hover(function(){
 
 			if (handshake == 0){
 

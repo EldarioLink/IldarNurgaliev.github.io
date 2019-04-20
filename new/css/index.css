@@ -136,9 +136,6 @@ textarea.form-set{
   margin: 0px;
 }
 
-/* .uslugio-title {
-    display: block;
-} */
 .navbar {
   min-height: 60px;
 }
@@ -159,11 +156,11 @@ textarea.form-set{
   width: 40px;
 }
 
-.h1.uslugio-title {
+.h1.all-my-services {
   word-wrap: normal;
 }
 
-.h1.uslugio-title #o {
+.h1.all-my-services #o {
   color: #ff005a;
 }
 
@@ -171,7 +168,7 @@ textarea.form-set{
   font-size: 20px;
 }
 
-.h1.uslugio-title:hover {
+.h1.all-my-services:hover {
   color: #000000;
   text-decoration: none;
 }
@@ -320,7 +317,7 @@ a:hover {
   font-size: 18px;
 }
 
-.uslugio-header {
+.all-my-services-header {
   padding: 10px;
   background-color: #ffffff;
   margin-bottom: 10px;
@@ -451,15 +448,7 @@ a:hover {
   border: 2px solid #ccc;
   color: #000000;
 }
-.ads-phone-btn {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size:16px;
-  border: 2px solid #ccc;
-  color: #000000;
-  cursor: pointer;
-}
+
 .form-set{
   display: block;
   width: 100%;
