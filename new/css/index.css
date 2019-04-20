@@ -377,7 +377,7 @@ a:hover {
   margin-right:5px;
 }
 .brand-nav{
-  background-image: url("/assets/logoff.png");
+  background-image: url("../assets/logoff.png");
   background-size: cover; /* Масштабируем фон */
   height: 50px;
   width: 50px;
