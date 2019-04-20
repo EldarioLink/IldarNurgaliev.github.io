@@ -128,6 +128,9 @@ button {
   min-height: 160px;
   padding-bottom: 30px;
 }
+textarea.form-set{
+  height:auto;
+}
 
 .h1 {
   margin: 0px;
@@ -331,7 +334,15 @@ a:hover {
   padding: 0px;
   margin: 0px;
 }
-
+.nav_search{
+  border-radius: 12px;
+}
+.nav-btn-color{
+  background-color: #5fa7e4;
+}
+.nav-btn-color:hover{
+ background-color:  #449ae2;
+}
 #handshake {
   width: 32px;
   height: 32px;
@@ -425,12 +436,52 @@ a:hover {
   border: 2px solid #ccc;
 }
 
+.Icon_type_phone{
+  background-image: url(../assets/phone2.png);
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  background-size: contain;
+}
+
 .nav-btns {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 20px;
   border: 2px solid #ccc;
   color: #000000;
+}
+.ads-phone-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size:16px;
+  border: 2px solid #ccc;
+  color: #000000;
+  cursor: pointer;
+}
+.form-set{
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  outline:0;
+}
+
+.form-set:focus{
+  border: 1px solid #f9db4d;
 }
 .nav-btns:hover{
   color: #000000;

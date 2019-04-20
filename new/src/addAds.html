@@ -36,7 +36,7 @@
                       <li role="separator" class="divider"></li>
                       <li><a href="https://all-my-services.com/auth/logout">Выход</a></li>
                   </ul>
-                </span> <a class="nav-btns btn-primary" href="./src/addAds.html">Подать объявление</a>
+                </span> <a class="nav-btns nav-btn-color" href="./src/addAds.html">Подать объявление</a>
             </div>
 
                         </div>
@@ -79,7 +79,7 @@
 
                     <div class="form-group">
                         <label for="type">Выберите тип объявления</label>
-                        <select id="type" name="type" class="form-control">
+                        <select id="type" name="type" class="form-set">
                             <option value="master">Частный мастер</option>
                             <option value="company">Услуги компании</option>
                         </select>
@@ -88,7 +88,7 @@
     <label for="selectReg">Местоположение</label>
     <div class="row" id="select_location">
         <div class="col-sm-6">
-            <select id="region" name="region_id" class="form-control" required="">
+            <select id="region" name="region_id" class="form-set" required="">
                 <option value="">- Выбрать регион -</option>
                                     <option value="1">Адыгея</option>
                                     <option value="2">Алтайский край</option>
@@ -208,7 +208,7 @@
 </script>
                     <div class="form-group">
     <label for="selectCat">Выберите категорию</label>
-            <select id="scat-0" class="form-control sel-cat" required onchange="onChCategory(0);">
+            <select id="scat-0" class="form-set sel-cat" required onchange="onChCategory(0);">
             <option>-- Выберете категорию --</option>
                             <option value="1">Ремонт, строительство</option>
                             <option value="3">Красота, здоровье</option>
@@ -272,11 +272,11 @@
                     <div id="podcat"></div>
                     <div class="form-group">
                         <label for="title">Название объявления</label>
-                        <input minlength="5" maxlength="225" type="text" value="" name="title" class="form-control" id="title" required>
+                        <input minlength="5" maxlength="225" type="text" value="" name="title" class="form-set" id="title" required>
                     </div>
                     <div class="form-group">
                         <label for="description">Описание объявления</label>
-                        <textarea minlength="5" maxlength="5000" style="resize: none;" rows="5" maxlength="5000" name="description" id="description" class="form-control" required></textarea>
+                        <textarea minlength="5" maxlength="5000" style="resize: none;" rows="5" maxlength="5000" name="description" id="description" class="form-set" required></textarea>
                     </div>
                     <div class="form-group">
     <label>Прайслист (не обязательно)</label>
