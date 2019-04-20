@@ -368,7 +368,7 @@ a:hover {
 
 }
 .marker-geo{
-  background-image: url("/assets/compass.png");
+  background-image: url("../assets/compass.png");
   background-size: cover; /* Масштабируем фон */
   height: 16px;
   width: 16px;
