@@ -211,6 +211,7 @@ h1 {
 
 .images img {
   width: 100px;
+  height: 100px;
   margin-right: 10px;
 }
 
@@ -685,6 +686,7 @@ a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   display: flex;
+  margin-bottom: 15px;
 }
 .one-post-item-bottom-line {
   background-color: #ffffff;
@@ -740,7 +742,8 @@ a:hover {
   border-radius: 8px;
 }
 
-.more_theme {
+.img_radius{
+  border-radius: 5px;
 }
 
 .nav_theme {
