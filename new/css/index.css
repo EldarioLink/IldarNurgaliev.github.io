@@ -301,8 +301,9 @@ body {
   width: 100px;
   height: 100px;
   float: left;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 .imgPhone {
   background-image: url(../assets/phone.svg);
@@ -742,7 +743,7 @@ a:hover {
   border-radius: 8px;
 }
 
-.img_radius{
+.img_radius {
   border-radius: 5px;
 }
 
