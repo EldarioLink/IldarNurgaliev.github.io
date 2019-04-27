@@ -677,10 +677,15 @@ a:hover {
   padding-left: 15px;
   background-color: #ffffff;
 }
-.social-btn{
-  margin-top:20px;
+.social-btn {
+  margin-top: 20px;
 }
-
+.history-back{
+  margin-bottom:10px;
+}
+.history-back:hover{
+  cursor: pointer;
+}
 .one-post-item-top-line {
   background-color: #ffffff;
   padding: 20px;
@@ -870,4 +875,8 @@ button.showone:hover {
 .demand input {
   margin-right: 20px;
   margin-left: 20px;
+}
+.uslugiBorder:hover {
+  background: rgb(204, 200, 200);
+  border-radius: 15px;
 }

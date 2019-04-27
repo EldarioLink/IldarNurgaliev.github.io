@@ -1,0 +1,180 @@
+
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="robots" content="noimageindex">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" href="https://yastatic.net/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/index.css">
+        <meta name="format-detection" content="telephone=no">
+        <title>Список мойх избраных объявлений | Объявления услуг</title>
+
+    <meta name="keywords" content="">
+
+    <meta name="description" content="">
+
+    </head>
+    <body>
+        <div class="all-my-services-header">
+            <div class="row">
+                    <div class="col-sm-6 col-xs-2">
+                            <a  href="https://all-my-services.com">
+                                    <span class="brand-nav"></span>
+
+
+                            </a>
+                    </div>
+                    <div class="col-sm-6 col-xs-10">
+                            <div class="pull-right">
+                                    <a class="nav-btns btn-default"
+                                    href="./src/favorites.html">Избранное</a>
+                                    <a class="nav-btns nav-btn-color"
+                                            href="https://all-my-services.com/auth/register">Регистрация</a>
+                                    <a class="nav-btns btn-default"
+                                            href="https://all-my-services.com/auth/login">Войти</a>
+                            </div>
+
+                    </div>
+            </div>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 blog-main">
+                        <div class="mainpage">
+        <div class="my-posts-top">
+            <h1>Избранное объявления</h1>
+        </div>
+        <div id="posts-items">
+            <div class="alert alert-info">Список объявлений пуст!</div>
+
+        </div>
+    </div>
+    <div class="reqblock"></div>
+    <div class="similarblock"></div>
+    <div class="one-post-item-top-line onpil" style="display: block;">
+    <div class="btn btn-default btn-lg" onclick="showPosts();"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</div>
+</div>
+<div id="one-post-item" style="display: block;">
+
+</div>
+<div class="one-post-item-bottom-line onpil" style="display: block;">
+    <div class="btn btn-default btn-lg one-post-item-back" onclick="showPosts();"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Назад</div>
+</div>
+<script>
+    function showPost(id){
+        $.ajax({
+            url: 'https://all-my-services.com/ajax/post/show',
+            dataType: "html",
+            type: "get",
+            data:{
+                id: id,
+                _token: "9d3TCHLwM5HxK15aVVcXJFwQhTiM0zVSEG70D0OM"
+            },
+            success: function(data){
+                $('#one-post-item').html(data);
+                $('#one-post-item').css('display', 'block');
+                $('.onpil').css('display', 'block');
+                $('.onpil').css('display', 'block');
+                $('#posts-items').css('display', 'none');
+            }
+        });
+    }
+    function showPosts(){
+        $('#one-post-item').css('display', 'none');
+        $('.onpil').css('display', 'none');
+        $('.onpil').css('display', 'none');
+        $('#posts-items').css('display', 'block');
+    }
+    function showPhonePost(id){
+        $.ajax({
+            url: 'https://all-my-services.com/ajax/post/phone',
+            dataType: "html",
+            type: "get",
+            data:{
+                id: id,
+                _token: "9d3TCHLwM5HxK15aVVcXJFwQhTiM0zVSEG70D0OM"
+            },
+            success: function(data){
+                $('#onePhone-' + id).text(data);
+                $('#showPhone-' + id).text(data);
+                $('#onePhone-' + id).attr('href', 'tel:' + data);
+                $('#showPhone-' + id).attr('href', 'tel:' + data);
+            }
+        });
+    }
+    function upPost(ref){
+        $.ajax({
+            url: 'https://all-my-services.com/ajax/post/up',
+            dataType: "html",
+            type: "get",
+            data:{
+                id: $(ref).data('id'),
+                _token: "9d3TCHLwM5HxK15aVVcXJFwQhTiM0zVSEG70D0OM"
+            },
+            success: function(data){
+                console.log(data);
+                $(data).remove();
+            }
+        });
+    }
+    function setStatusPost(ref){
+        $.ajax({
+            url: 'https://all-my-services.com/ajax/post/set-status',
+            dataType: "json",
+            type: "get",
+            data:{
+                id: $(ref).data('id'),
+                status: $(ref).attr('data-status'),
+                _token: "9d3TCHLwM5HxK15aVVcXJFwQhTiM0zVSEG70D0OM"
+            },
+            success: function(data){
+                console.log(data);
+                $(data.el_id).text(data.text);
+                $(data.el_id).attr('data-status', data.status);
+
+            }
+        });
+    }
+</script>
+    <div class="reqblock"></div>
+    <div class="similarblock"></div>
+                </div>
+                <div class="col-sm-4 sitebarcont">
+                    <div class="sitebar">
+    <div class="sidebar-module sidebar-module-inset sidebar-uslugio">
+        <p>                                                                               All-My-<span style="color:red;">Services</span>.com - объявления о услугах.
+
+
+        </p>
+
+                                    <p>
+                                        <a href="./src/addAds.html" class="sidebar_btn">Подать
+                                                объявление</a>
+                                </p>
+                            <p>
+                Список избранных Вами объявлений.
+            </p>
+                    </div>
+</div>
+                </div>
+            </div>
+        </div>
+        <div id="foter">
+                                                    <a href="/">All-My-Services.com</a> - Сайт бесплатных объявлений о услугах
+
+                                    <br>
+            <a href="https://all-my-services.com/auth/login">Вход</a> |
+            <a href="https://all-my-services.com/auth/register">Регистрация</a> |
+            <a href="https://all-my-services.com/password/email">Восстановление пароля</a> |
+            Служба поддержки: <a href="mailto:help@all-my-services.com                        ">help@all-my-services.com                        </a>
+        </div>
+        </div><!-- /.container -->
+        <script src="https://yastatic.net/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="https://all-my-services.com/js/jquery.maskedinput.min.js"></script>
+        <script src="../js/script.js"></script>
+        <div class="nanobar" style="position: fixed;"><div class="bar" style="width: 5%;"></div></div>
+            </body>
+</html>
