@@ -678,10 +678,10 @@ a:hover {
   background-color: #ffffff;
 }
 
-.history-back{
-  margin-bottom:10px;
+.history-back {
+  margin-bottom: 10px;
 }
-.history-back:hover{
+.history-back:hover {
   cursor: pointer;
 }
 .one-post-item-top-line {
@@ -729,6 +729,12 @@ a:hover {
   transition: height 0.3s;
   background: red;
   display: none;
+}
+
+@media (max-width: 504px) {
+  .all-content{
+    min-width: 504px;
+  }
 }
 
 .table {
