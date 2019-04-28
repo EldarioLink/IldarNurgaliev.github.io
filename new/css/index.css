@@ -873,7 +873,9 @@ button.showone:hover {
   padding: 25px 25px 0px 0px;
   font-weight: 600;
 }
-
+.name_Ads{
+  display: inline-block;
+}
 .demand {
   padding: 20px;
   background: #ffffff;
